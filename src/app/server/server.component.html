@@ -1,2 +1,7 @@
 <p>Hi From The Server Component!😄</p>
-<p>Your Server ID : {{serverId}} , Server Status: {{ getServerStatus() }}</p>
+<p
+  [ngStyle]="{ backgroundColor: getBackgroundColor() }"
+  [ngClass]=" {online: serverStatus === 'online'} "
+>
+  Your Server ID : {{ serverId }} , Server Status: {{ getServerStatus() }}
+</p>
